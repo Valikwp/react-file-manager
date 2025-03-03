@@ -1,5 +1,5 @@
 {
-  "name": "@cubone/react-file-manager",
+  "name": "@cubonefork/react-file-manager",
   "private": false,
   "version": "1.10.5",
   "type": "module",
@@ -54,7 +54,7 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Saifullah-dev/react-file-manager.git"
+    "url": "git+https://github.com/Valikwp/react-file-manager.git"
   },
   "keywords": [
     "react",
@@ -62,10 +62,10 @@
     "component",
     "react-file explorer"
   ],
-  "author": "Saifullah Zubair",
+  "author": "Valik Horobets",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Saifullah-dev/react-file-manager/issues"
+    "url": "https://github.com/Valikwp/react-file-manager/issues"
   },
-  "homepage": "https://github.com/Saifullah-dev/react-file-manager#readme"
+  "homepage": "https://github.com/Valikwp/react-file-manager#readme"
 }

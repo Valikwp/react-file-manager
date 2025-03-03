@@ -245,10 +245,11 @@ const FileItem = ({
       </div>
 
       {activeLayout === "list" && (
-        <>
-          <div className="modified-date">{formatDate(file.updatedAt)}</div>
-          <div className="size">{file?.size > 0 ? getDataSize(file?.size) : ""}</div>
-        </>
+          <>
+            <div className="modified-date">{formatDate(file.updatedAt)}</div>
+            <div className="size">{file?.size > 0 ? getDataSize(file?.size) : ""}</div>
+            <div className="type">{file?.type}</div>
+          </>
       )}
 
       {/* Drag Icon & Tooltip Setup */}

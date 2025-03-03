@@ -223,6 +223,13 @@
     font-size: 0.8em;
     width: calc(10%);
   }
+  .type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    width: calc(10%);
+  }
 }
 
 .empty-folder {
