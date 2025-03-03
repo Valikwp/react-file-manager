@@ -37,7 +37,7 @@ const FilesHeader = ({ unselectFiles }) => {
         <div className="file-name">Name</div>
         <div className="file-date">Modified</div>
         <div className="file-size">Size</div>
-        <div className="file-size">Extension</div>
+        <div className="file-type">Extension</div>
       </div>
   );
 };
