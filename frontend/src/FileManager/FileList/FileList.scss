@@ -198,6 +198,8 @@
     padding-left: 33px;
     margin: 0;
     width: calc(70% - 30px);
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     &:hover {
       background-color: unset;
@@ -209,6 +211,14 @@
 
     .file-name {
       max-width: 285px;
+      a {
+        display: block;
+        color: #000;
+        font-size: 14px;
+      }
+      a:hover {
+        text-decoration: none;
+      }
     }
   }
 

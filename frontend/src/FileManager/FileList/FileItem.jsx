@@ -240,7 +240,10 @@ const FileItem = ({
             )}
           </div>
         ) : (
-          <span className="text-truncate file-name">{file.name}</span>
+          <span className="text-truncate file-name">{file.name}
+            {file.link && <a href={file.link}>Collection Stamp History</a>}
+
+          </span>
         )}
       </div>
 
