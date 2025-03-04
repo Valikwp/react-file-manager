@@ -1,7 +1,7 @@
 {
   "name": "@valikwp/react-file-manager",
   "private": false,
-  "version": "2.10.9",
+  "version": "2.10.10",
   "type": "module",
   "module": "dist/react-file-manager.es.js",
   "files": [

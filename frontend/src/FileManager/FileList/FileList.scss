@@ -192,7 +192,7 @@
 
   .file-item {
     flex-direction: row;
-    height: 13px;
+    height: 60px;
     justify-content: unset;
     padding: 15px;
     padding-left: 33px;
@@ -214,7 +214,8 @@
       a {
         display: block;
         color: #000;
-        font-size: 14px;
+        font-size: 12px;
+        text-decoration: underline;
       }
       a:hover {
         text-decoration: none;
