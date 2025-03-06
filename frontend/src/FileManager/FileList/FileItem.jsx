@@ -25,6 +25,7 @@ const FileItem = ({
   triggerAction,
   handleContextMenu,
   setLastSelectedFile,
+                    timeZone,
 }) => {
   const [fileSelected, setFileSelected] = useState(false);
   const [lastClickTime, setLastClickTime] = useState(0);
@@ -249,7 +250,7 @@ const FileItem = ({
 
       {activeLayout === "list" && (
           <>
-            <div className="modified-date">{formatDate(file.updatedAt)}</div>
+            <div className="modified-date">{formatDate(file?.metadata?.timestamp, timeZone)}</div>
             <div className="size">{file?.size > 0 ? getDataSize(file?.size) : ""}</div>
             <div className="type">{file?.type}</div>
           </>

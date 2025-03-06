@@ -15,6 +15,7 @@ const FileList = ({
   onRefresh,
   enableFilePreview,
   triggerAction,
+                    timeZone,
 }) => {
   const { currentPathFiles } = useFileNavigation();
   const filesViewRef = useRef(null);
@@ -42,7 +43,7 @@ const FileList = ({
       onContextMenu={handleContextMenu}
       onClick={unselectFiles}
     >
-      {activeLayout === "list" && <FilesHeader unselectFiles={unselectFiles} />}
+      {activeLayout === "list" && <FilesHeader unselectFiles={unselectFiles} timeZone={timeZone} />}
 
       {currentPathFiles?.length > 0 ? (
         <>
@@ -61,6 +62,7 @@ const FileList = ({
               handleContextMenu={handleContextMenu}
               setVisible={setVisible}
               setLastSelectedFile={setLastSelectedFile}
+              timeZone={timeZone}
             />
           ))}
         </>

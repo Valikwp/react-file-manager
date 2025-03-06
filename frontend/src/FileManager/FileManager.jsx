@@ -44,6 +44,7 @@ const FileManager = ({
   filePreviewComponent,
   primaryColor = "#6155b4",
   fontFamily = "Nunito Sans, sans-serif",
+                       timeZone = "UTC",
 }) => {
   const triggerAction = useTriggerAction();
   const { containerRef, colSizes, isDragging, handleMouseMove, handleMouseUp, handleMouseDown } =

@@ -1,15 +1,16 @@
-export const formatDate = (date) => {
+export const formatDate = (date, timeZone = "UTC") => {
   if (!date || isNaN(Date.parse(date))) return "";
 
-  date = new Date(date);
-  let hours = date.getHours();
-  const minutes = date.getMinutes();
-  const ampm = hours >= 12 ? "PM" : "AM";
-  hours = hours % 12;
-  hours = hours ? hours : 12;
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
-  const year = date.getFullYear();
-
-  return `${month}/${day}/${year} ${hours}:${minutes < 10 ? "0" + minutes : minutes} ${ampm}`;
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  })
+      .format(new Date(date))
+      .replace(/(\w{3}) (\d+) ?, (\d{4}),/, "$1 $2, $3 |");
 };
