@@ -94,6 +94,7 @@ const FileManager = ({
                       onRefresh={onRefresh}
                       enableFilePreview={enableFilePreview}
                       triggerAction={triggerAction}
+                      timeZone={timeZone}
                     />
                   </div>
                 </section>
