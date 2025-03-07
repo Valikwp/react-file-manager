@@ -211,7 +211,7 @@
     }
 
     .file-name {
-      max-width: 285px;
+      max-width: calc(100% - 28px);
       a {
         display: block;
         color: #000;
