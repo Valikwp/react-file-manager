@@ -16,6 +16,7 @@ const FileList = ({
   enableFilePreview,
   triggerAction,
                     timeZone,
+                    onDownloadZip,
 }) => {
   const { currentPathFiles } = useFileNavigation();
   const filesViewRef = useRef(null);
@@ -63,6 +64,7 @@ const FileList = ({
               setVisible={setVisible}
               setLastSelectedFile={setLastSelectedFile}
               timeZone={timeZone}
+              onDownloadZip={onDownloadZip}
             />
           ))}
         </>

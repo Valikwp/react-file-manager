@@ -29,6 +29,7 @@ const FileManager = ({
                          onPaste,
                          onRename,
                          onDownload,
+                         onDownloadZip,
                          onDelete = () => null,
                          onLayoutChange = () => {
                          },
@@ -100,6 +101,7 @@ const FileManager = ({
                                             enableFilePreview={enableFilePreview}
                                             triggerAction={triggerAction}
                                             timeZone={timeZone}
+                                            onDownloadZip={onDownloadZip}
                                         />
                                     </div>
                                 </section>
