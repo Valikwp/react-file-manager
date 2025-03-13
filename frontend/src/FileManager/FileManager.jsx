@@ -76,6 +76,7 @@ const FileManager = ({
                                     onLayoutChange={onLayoutChange}
                                     onRefresh={onRefresh}
                                     triggerAction={triggerAction}
+
                                 />
                                 <section
                                     ref={containerRef}
@@ -92,7 +93,7 @@ const FileManager = ({
                                     </div>
 
                                     <div className="folders-preview" style={{width: colSizes.col2 + "%"}}>
-                                        <BreadCrumb/>
+                                        <BreadCrumb onDownloadZip={onDownloadZip} />
                                         <FileList
                                             onCreateFolder={onCreateFolder}
                                             onRename={onRename}

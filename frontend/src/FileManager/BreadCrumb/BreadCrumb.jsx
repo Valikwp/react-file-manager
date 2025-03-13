@@ -4,16 +4,19 @@ import { useFileNavigation } from "../../contexts/FileNavigationContext";
 import { useDetectOutsideClick } from "../../hooks/useDetectOutsideClick";
 import "./BreadCrumb.scss";
 
-const BreadCrumb = () => {
+const BreadCrumb = ({onDownloadZip}) => {
   const [folders, setFolders] = useState([]);
   const [hiddenFolders, setHiddenFolders] = useState([]);
   const [hiddenFoldersWidth, setHiddenFoldersWidth] = useState([]);
   const [showHiddenFolders, setShowHiddenFolders] = useState(false);
 
+  const { currentFolder } = useFileNavigation();
+
   const { currentPath, setCurrentPath } = useFileNavigation();
   const breadCrumbRef = useRef(null);
   const foldersRef = useRef([]);
   const moreBtnRef = useRef(null);
+
   const popoverRef = useDetectOutsideClick(() => {
     setShowHiddenFolders(false);
   });
@@ -100,6 +103,11 @@ const BreadCrumb = () => {
           </div>
         ))}
       </div>
+
+      {currentFolder?.isDirectory && !currentFolder?.userAddress && (
+          <button onClick={() => onDownloadZip(currentFolder.name)}>Download ZIP</button>
+
+      )}
 
       {showHiddenFolders && (
         <ul ref={popoverRef.ref} className="hidden-folders-container">

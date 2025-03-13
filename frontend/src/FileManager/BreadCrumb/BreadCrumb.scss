@@ -2,7 +2,18 @@
 
 .bread-crumb-container {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  > button {
+    cursor: pointer;
+    text-decoration: underline;
+    padding-right: 20px;
+  }
+  > button:hover {
 
+    text-decoration: none;
+
+  }
   .breadcrumb {
     height: 22px;
     min-height: 22px;
@@ -12,7 +23,7 @@
     border-bottom: 1px solid $border-color;
     padding: 6px 0 6PX 15px;
     overflow-x: hidden;
-
+    width: calc(100% - 130px);
     &::-webkit-scrollbar {
       height: 3px;
     }

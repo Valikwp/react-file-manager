@@ -243,7 +243,7 @@ const FileItem = ({
                     </div>
                 ) : (
                     <span className="text-truncate file-name">{file.name}
-                        {file.isDirectory && (
+                        {file.isDirectory && !file.userAddress && (
                             <div className="collection-wrap">
                                 {file.link && <a href={file.link}>Collection Stamp History</a>}
                                 <button onClick={() => onDownloadZip(file.name)}>Download ZIP</button>
